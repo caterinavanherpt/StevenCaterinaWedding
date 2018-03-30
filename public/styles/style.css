@@ -1,3 +1,4 @@
+
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
 
@@ -132,9 +133,65 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto; }
-
 body {
-  background: pink; }
+  background: rgba(126, 130, 135, 0.270588); }
+
+.header {
+  height: 100vh;
+  padding-top: 20%; }
+
+.names {
+  display: flex;
+  justify-content: center; }
+
+h1 {
+  color: #534847;
+  text-transform: uppercase;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 1em;
+  text-align: center;
+  font-size: 2.5em;
+  padding: 0 2%; }
+
+.savethedate {
+  text-align: center; }
+  .savethedate a {
+    color: #A7918F;
+    font-family: "Allura", cursive;
+    text-decoration: none;
+    font-size: 2.5em;
+    text-align: center; }
+  .savethedate a:hover {
+    color: #534847; }
+
+.para {
+  color: #534847;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  text-align: center;
+  line-height: 50px;
+  font-size: 0.8em; }
+  .para a {
+    text-decoration: none;
+    color: #534847;
+    text-transform: uppercase; }
+  .para a:hover {
+    color: #A7918F; }
+
+@media (max-width: 950px) {
+  .header {
+    padding-top: 35%; }
+  .names {
+    padding-bottom: 5%;
+    display: block; } }
+
+@media (max-width: 680px) {
+  body {
+    font-size: 70%; }
+  .header {
+    padding-top: 50%; }
+  h1 {
+    font-size: 2em;
+    letter-spacing: 0.6em;
+    line-height: 20px; } }

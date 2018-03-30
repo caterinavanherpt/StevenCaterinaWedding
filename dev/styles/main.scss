@@ -1,10 +1,86 @@
 @import 'setup';
-
-.container {
-	max-width: 900px;
-	margin: 0 auto;
-}
+@import 'global';
 
 body {
-	background: pink;
+	background: $transparentgrey;
+}
+
+.header {
+	height: 100vh;
+	padding-top: 20%;
+}
+
+.names {
+	display: flex;
+	justify-content: center;
+}
+
+h1 {
+	color: $darkbrown;
+	text-transform: uppercase;
+	font-family: $headerfont;
+	letter-spacing: 1em;
+	text-align: center;
+	font-size: 2.5em;
+	padding: 0 2%;
+}
+
+.savethedate {
+	text-align: center;
+	a {
+		color: $brown;
+		font-family: $cursive;
+		text-decoration: none;
+		font-size: 2.5em;
+		text-align: center;
+	}
+	a:hover {
+		color: $darkbrown;
+	}
+}
+
+
+
+.para {
+	color: $darkbrown;
+	font-family: $parafont;
+	text-transform: uppercase;
+	letter-spacing: 0.3em;
+	text-align: center;
+	line-height: 50px;
+	font-size: 0.8em;
+	a {
+		text-decoration: none;
+		color: $darkbrown;
+		text-transform: uppercase;
+	}
+	a:hover {
+		color: $brown;
+	}
+}
+
+// responsive styling
+
+@include respond-to("medium") {
+	.header {
+		padding-top: 35%;
+	}
+	.names {
+		padding-bottom: 5%;
+		display: block;
+	}
+}
+
+@include respond-to("small") {
+	body {
+		font-size: 70%;
+	}
+	.header {
+		padding-top: 50%;
+	}
+	h1 {
+		font-size: 2em;
+		letter-spacing: 0.6em;
+    	line-height: 20px;
+	}
 }

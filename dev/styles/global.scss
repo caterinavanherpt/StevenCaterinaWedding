@@ -1,0 +1,41 @@
+// variables
+$transparentbrown: rgba(140, 116, 114, 0.34);
+$brown: #A7918F; 
+$darkbrown: #534847;
+$white: #EEEEEE;
+$grey: #7E8287;
+$transparentgrey: rgba(126, 130, 135, 0.27058823529411763);
+
+
+$headerfont:'Playfair Display', serif;
+$parafont: 'Montserrat', sans-serif;
+$cursive: 'Allura', cursive;
+
+
+//mixin for media queries
+// @include respond-to("small") {}
+@mixin respond-to($breakpoint) {
+	@if $breakpoint == "small" {
+		@media (max-width: 680px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint == "medium" {
+		@media (max-width: 950px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint = "large" {
+		@media (max-width: 1380px) {
+			@content;
+		}
+	}
+
+	@else {
+		@media ($breakpoint) {
+			@content;
+		}
+	}
+}
